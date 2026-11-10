@@ -1,0 +1,184 @@
+{
+  "tested_at": "2026-11-10T22:24:22.271250+09:00",
+  "version": {
+    "version": "0.40.16"
+  },
+  "model": "qwen3:4b",
+  "models": {
+    "models": [
+      {
+        "name": "qwen3:4b",
+        "model": "qwen3:4b",
+        "modified_at": "2026-11-10T22:20:40.465365+09:00",
+        "size": 2497293931,
+        "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2560,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      }
+    ]
+  },
+  "running_models": {
+    "models": [
+      {
+        "name": "qwen3:4b",
+        "model": "qwen3:4b",
+        "size": 3180247121,
+        "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-11-10T22:29:22.2707377+09:00",
+        "size_vram": 3180247121,
+        "context_length": 4096,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "settings": {
+    "think": false,
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 4096,
+    "num_predict": 512
+  },
+  "tests": [
+    {
+      "test": "한국어 인사",
+      "prompt": "안녕하세요! 당신이 할 수 있는 일을 한국어 두 문장으로 소개해 주세요.",
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-11-10T13:24:03.631827Z",
+        "message": {
+          "role": "assistant",
+          "content": "Okay, the user wants me to introduce what I can do in two Korean sentences. Let me think.\n\nFirst, I need to make sure it's two sentences. Let me recall my capabilities. I can answer questions, help with writing, translate languages, provide information, etc.\n\nIn Korean, I should be concise. Let me try to phrase it.\n\nFirst sentence: I can answer questions and help with writing tasks.\n\nSecond sentence: I can translate languages and provide useful information.\n\nWait, maybe more precise. Let me check.\n\nThe user said \"당신이 할 수 있는 일을 한국어 두 문장으로 소개해 주세요.\" So, two sentences in Korean.\n\nLet me draft:\n\n1. 저는 질문에 답하고 글쓰기 도움을 주는 데 도움이 될 수 있습니다.\n2. 또한, 언어 번역과 유용한 정보를 제공할 수 있습니다.\n\nHmm, but maybe the second sentence is a bit long. Let me make it more concise.\n\nAlternatively:\n\n1. 저는 질문 답변과 글쓰기 지원을 제공합니다.\n2. 또한, 언어 번역 및 정보 제공을 도와드릴 수 있습니다.\n\nWait, the user wants two sentences. Let me check the grammar.\n\n\"질문 답변\" is a bit awkward. Maybe \"질문에 답하고 글쓰기 도움을 주는\" but need to be natural.\n\nAnother try:\n\n1. 저는 질문에 답하고 글쓰기 도움을 주는 데 도움이 될 수 있습니다.\n2. 또한, 언어 번역과 유용한 정보를 제공할 수 있습니다.\n\nBut the user wants two sentences. Let me make sure each sentence is a complete sentence.\n\nWait, the first sentence is a bit long. Maybe split into two parts.\n\nAlternatively, use more natural Korean.\n\nIn Korean, it's common to use \"할 수 있습니다\" for ability.\n\nSo:\n\n1. 저는 질문에 답하고 글쓰기 도움을 주는 데 도움이 될 수 있습니다.\n2. 또한, 언어 번역과 유용한을 제공할 수 있습니다.\n\nWait, \"유용한 정보\" is \"유용한 정보를 제공할 수 있습니다.\"\n\nWait, the second sentence: \"언어 번역 및 유용한 정보 제공을 도와드릴 수 있습니다.\"\n\nBut the user wants two sentences. Let me check.\n\nMaybe:\n\n1. 저는 질문에 답하고 글쓰기 지원을 제공합니다.\n2. 또한, 언어 번역과 정보"
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 12768505400,
+        "load_duration": 5433150000,
+        "prompt_eval_count": 65,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 188340000,
+        "eval_count": 512,
+        "eval_duration": 7134697000
+      },
+      "wall_seconds": 12.777,
+      "tokens_per_second": 71.76
+    },
+    {
+      "test": "개념 설명",
+      "prompt": "오픈소스 LLM이 무엇인지 초보자에게 한국어 세 문장으로 설명해 주세요.",
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-11-10T13:24:10.4468376Z",
+        "message": {
+          "role": "assistant",
+          "content": "Okay, I need to explain what an open-source LLM is to a beginner in three Korean sentences. Let me think.\n\nFirst, I should define LLM in simple terms. LLM stands for Large Language Model, right? So maybe start with that.\n\nOpen-source means the code and models are freely available. So the user can use, modify, and share them without restrictions.\n\nFor a beginner, I should avoid technical jargon. Let me try to structure three sentences.\n\nFirst sentence: What is LLM? Large Language Model is a type of AI that can understand and generate human language.\n\nSecond sentence: Open-source part. Open-source LLMs are models where the code and training data are publicly available, so anyone can use and improve them.\n\nThird sentence: Why it's important for beginners. This allows beginners to experiment and build their own applications without paying for proprietary models.\n\nWait, maybe the third sentence should be more about the benefit. Let me check.\n\nHmm, the user wants three sentences. Let me make sure each sentence is concise.\n\nFirst sentence: 오픈소스 LLM은 대형 언어 모델을 의미합니다. 대형 언어 모델은 인간의 언어를 이해하고 생성할 수 있는 인공지능입니다.\n\nWait, but the user asked for \"오픈소스 L과 LLM\" so maybe better to say \"오픈소스 LLM\" is a large language model that's open source.\n\nWait, the term is \"오픈소스 LLM\" which is \"open-source large language model\".\n\nSo first sentence: 오픈소스 LLM은 누구나 무료로 사용할 수 있는 대형 언어 모델입니다.\n\nSecond sentence: 이 모델은 코드와 학습 데이터가 공개되어 누구나 수정하고 개선할 수 있습니다.\n\nThird sentence: 초보자에게는 직접 실험하고 애플리케이션을 만들 수 있는 장점을 가지고 있습니다.\n\nWait, maybe the third sentence is a bit long. Let me check the length.\n\nAlternatively, maybe:\n\n1. 오픈소스 LLM은 누구나 무료로 사용할 수 있는 대형 언어 모델입니다.\n2. 이 모델의 코드와 학습 데이터가 공개되어 초보자도 직접 개선하고 활용할 수 있습니다.\n3. 따라서 초보자가 직접 애플리케이션을 만들거나 실험하는 데 도움"
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 6811425600,
+        "load_duration": 11778700,
+        "prompt_eval_count": 70,
+        "prompt_eval_cached_count": 37,
+        "prompt_eval_duration": 94506000,
+        "eval_count": 512,
+        "eval_duration": 6665239000
+      },
+      "wall_seconds": 6.814,
+      "tokens_per_second": 76.82
+    },
+    {
+      "test": "계산",
+      "prompt": "사과가 3개 있고 2개를 더 받았습니다. 사과는 모두 몇 개인가요? 한 문장으로 답하세요.",
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-11-10T13:24:12.7792261Z",
+        "message": {
+          "role": "assistant",
+          "content": "Okay, let's see. The problem says there are 3 apples, and then you get 2 more. So I need to find the total number of apples.\n\nFirst, the initial number is 3. Then you receive 2 more. So adding them together: 3 + 2 equals 5. So the total should be 5 apples.\n\nWait, the question says \"사과는 모두 몇 개인가요?\" which translates to \"How many apples are there in total?\" So yeah, 3 plus 2 is 5. I think that's straightforward. Let me check again. 3 apples, then 2 more. So 3 + 2 = 5. Yep, that's right. So the answer is 5.\n</think>\n\n사과는 3개에서 2개를 더해 모두 5개입니다."
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 2329702500,
+        "load_duration": 9192900,
+        "prompt_eval_count": 77,
+        "prompt_eval_cached_count": 37,
+        "prompt_eval_duration": 119480000,
+        "eval_count": 178,
+        "eval_duration": 2130377000
+      },
+      "wall_seconds": 2.331,
+      "tokens_per_second": 83.55
+    },
+    {
+      "test": "대화 문맥",
+      "prompt": "이번 대화에서 기억할 암호는 파란고래입니다. 암호를 기억했다고 짧게 답하세요.",
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-11-10T13:24:18.5234375Z",
+        "message": {
+          "role": "assistant",
+          "content": "Okay, the user wants me to remember a password for this conversation, which is \"파란고래\" (blue whale). They said to respond briefly if I remember it.\n\nFirst, I need to confirm that I remember the password they mentioned. The password is \"파란고래\". Since they specified to answer briefly, I should just state that I remember it without adding extra info.\n\nWait, the user says \"암호를 기억했다고 짧게 답하세요.\" which translates to \"Answer briefly that you remember the password.\" So I need to say something like \"파란고래를 기억합니다.\" But maybe even shorter. Let me check.\n\nIn Korean, \"파란고래\" is the password. The user wants a short answer confirming memory. So the answer should be just \"파란고래\" or \"기억합니다.\" Hmm, but the instruction says \"암호를 기억했다고 짧게 답하세요.\" So the answer should be in Korean, short, saying that the password is remembered.\n\nWait, maybe the user wants me to confirm that I remember the password they mentioned. So the answer is \"기억합니다.\" But they might want the password itself? Wait, no. The user says \"암호를 기억했다고 짧게 답하세요.\" So \"암호를 기억했다\" means \"I remember the password\". So the answer is \"파란고래를 기억합니다.\" But they want it short. Maybe just \"기억합니다.\" But the user specified the password is \"파란고래\", so maybe they want to confirm that the password is remembered, so the answer is \"파란고래\" as the password, but the instruction says \"암호를 기억했다고 짧게 답하세요.\" So the answer is a confirmation that the password is remembered.\n\nWait, the user says \"이번 대화에서 기억할 암호는 파란고래입니다. 암호를 기억했다고 짧게 답하세요.\" So the password to remember is \"파란고래\". They want me to respond briefly that I remember it. So the answer should be something like \"기억했습니다.\" or \"파란고래 기억합니다.\" But in Korean, the most natural short answer would be \"기억합니다.\" But maybe they want to specify the password? Wait, the user says \"암호를 기억했다고\" so it's about remembering the password. So the answer is just confirming that I remember it, so \""
+        },
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 5742156700,
+        "load_duration": 8298800,
+        "prompt_eval_count": 74,
+        "prompt_eval_cached_count": 37,
+        "prompt_eval_duration": 97617000,
+        "eval_count": 512,
+        "eval_duration": 5621071000
+      },
+      "wall_seconds": 5.744,
+      "tokens_per_second": 91.09
+    },
+    {
+      "test": "대화 문맥",
+      "prompt": "방금 내가 알려 준 암호는 무엇인가요? 암호만 답하세요.",
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-11-10T13:24:22.2697148Z",
+        "message": {
+          "role": "assistant",
+          "content": "Okay, let's see. The user is asking, \"방금 내가 알려 준 암호는 무엇인가요? 암호만 답하세요.\" which translates to \"What password did I just tell you? Answer only the password.\"\n\nWait, in the previous message, the user said, \"이번 대화에서 기억할 암호는 파란고래입니다. 암호를 기억했다고 짧게 답하세요.\" So they set the password as \"파란고래\" (blue whale) for this conversation. Then in the current message, they're asking what password they just told me, and to answer only the password.\n\nBut the user wants me to answer only the password. So the password they mentioned earlier is \"파란고래\". So the answer should be \"파란고의래\" but wait, no, \"파란고래\" is the correct spelling. Wait, in Korean, \"blue whale\" is \"파란고래\". Let me confirm.\n\nYes, \"파란고래\" is the correct term for blue whale in Korean. So the answer is just \"파란고래\".\n\nBut the user says \"암호만 답하세요.\" which means \"Answer only the password.\" So I should output just \"파란고래\" without any extra text.\n\nWait, but in the previous interaction, the user said \"이번 대화에서 기억할 암호는 파란고래입니다.\" So the password is \"파란고래\". So the answer here is just that.\n\nSo the response should be \"파란고래\" as the password.\n</think>\n\n파란고래"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 3744227800,
+        "load_duration": 9166000,
+        "prompt_eval_count": 617,
+        "prompt_eval_cached_count": 72,
+        "prompt_eval_duration": 151228000,
+        "eval_count": 340,
+        "eval_duration": 3545415000
+      },
+      "wall_seconds": 3.747,
+      "tokens_per_second": 95.9
+    }
+  ]
+}
