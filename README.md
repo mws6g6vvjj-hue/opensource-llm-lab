@@ -2,6 +2,14 @@
 
 [Notion 실습 설명서](https://app.notion.com/p/4143a9f958b980c38daee3fd020c7af7) · [코드와 테스트 분석](REPORT.md)
 
+## 교수님용 웹 실습
+
+[설치 없이 프로그램 실행](https://mws6g6vvjj-hue.github.io/opensource-llm-lab/)
+
+링크를 열고 **모델 불러오기**를 누른 뒤 질문을 입력합니다. 로그인, Python, Ollama 설치가 필요하지 않습니다. 첫 실행에는 Hugging Face의 모델을 브라우저로 내려받아 준비하므로 인터넷과 PC 성능에 따라 수 분이 걸릴 수 있습니다. 최신 PC용 Chrome 또는 Edge를 권장합니다.
+
+웹 버전은 `onnx-community/Qwen2.5-0.5B-Instruct`를 Transformers.js 3.8.1로 브라우저에서 실행합니다. 아래 PC 실습의 `qwen2.5:1.5b`와 크기·실행 방식이 다르며 답변과 속도도 같지 않습니다. `docs/`에 웹 소스가 있고 GitHub Pages에서 제공합니다. GPU 사용이 어려우면 호환 모드(CPU)로 실행합니다.
+
 Windows PC에 Ollama와 Qwen2.5 1.5B를 설치하고 Python 대화 프로그램으로 한국어 대화를 테스트하는 과제입니다. 테스트 원문과 실행 수치는 `results/test-results.json`, 상세 설명은 `REPORT.md`에 기록합니다.
 
 ## 구성

@@ -1,5 +1,36 @@
 # 오픈소스 LLM 설치 및 실행 — Qwen2.5
 
+# 교수님용 프로그램 바로 실행
+
+## [▶ 설치 없이 대화 프로그램 실행하기](https://mws6g6vvjj-hue.github.io/opensource-llm-lab/)
+
+1. 위 실행 링크를 누른다.
+2. **모델 불러오기**를 누르고 준비가 끝날 때까지 기다린다.
+3. 질문을 입력하고 **보내기**를 누른다.
+
+Python·Ollama 설치, 로그인, API 키 입력 없이 사용할 수 있다. 최신 PC용 Chrome 또는 Edge를 권장한다. 첫 실행에는 약 786MB의 모델 파일과 실행 도구를 인터넷으로 불러오므로 PC와 네트워크에 따라 수 분이 걸릴 수 있다. 모델이 브라우저 캐시에 남으면 다음 실행은 빨라질 수 있다.
+
+**Notion 안에서 실행 화면 보기**
+
+[웹 프로그램 열기](https://mws6g6vvjj-hue.github.io/opensource-llm-lab/)
+
+임베드 화면이 표시되지 않거나 모델 준비가 멈추면 위 **프로그램 실행 링크로 새 창을 열어** 이용한다. GPU가 지원되지 않는 환경에는 호환 모드(CPU)를 제공한다.
+
+| 구분 | 교수님용 웹 실습 | PC 설치 실습 |
+| --- | --- | --- |
+| 실행 위치 | 교수님 브라우저 | 설치한 Windows PC |
+| 모델 | Qwen2.5 0.5B Instruct, ONNX | Qwen2.5 1.5B Instruct, Ollama |
+| 실행 도구 | Transformers.js 3.8.1 | Ollama 0.40.16 + Python |
+| 설치·로그인 | 필요 없음 | Python 및 Ollama 준비 |
+| 입력 전달 | 브라우저 내부 모델 | PC의 로컬 API |
+| 결과 | 직접 질문해 확인 | 아래에 기록한 실측 결과 |
+
+아래 PC 실습의 1.5B 답변과 소요 시간을 웹의 0.5B 성능으로 해석하지 않는다. 웹 버전도 실제 언어 모델이 답변을 생성하며, 한국어 문장과 사실 설명에 오류가 있을 수 있다. 일반 대화는 페이지의 메모리에만 유지되고 대화 초기화 또는 새로고침 시 사라진다.
+
+**웹 구현 출처:** [ONNX 모델](https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct), [Qwen 원본 모델](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct), [Transformers.js 공식 문서](https://huggingface.co/docs/transformers.js), [양자화 실행 예제](https://huggingface.co/docs/transformers.js/guides/dtypes), [GitHub Pages 배포 문서](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+---
+
 **파이썬 기반 오픈소스 LLM 대화 프로그램**
 
 `chat.py` · `setup.ps1` · `start.ps1`
@@ -373,7 +404,7 @@ powershell -ExecutionPolicy Bypass -File .\start.ps1 -Test
 - 별도 유료 API 키 없이 실습.
 - 일반 대화 이력은 실행 중 메모리에만 유지.
 - 테스트 모드의 입력과 응답은 파일에 저장.
-- 현재 구현은 로컬 터미널 대화 프로그램이며, 공개 웹 서비스는 별도로 만들지 않았다.
+- PC용 터미널 프로그램과 별도로 설치 없이 이용하는 웹 대화 프로그램을 제공한다.
 
 **활용 예시**
 
@@ -419,7 +450,7 @@ powershell -ExecutionPolicy Bypass -File .\start.ps1 -Test
 
 연결 오류가 나면 `start.ps1`을 먼저 실행하고 `logs/ollama-error.log`를 확인한다. 모델 다운로드 실패 시 네트워크와 디스크 공간을 확인한다. 다른 Ollama 서버가 11434 포트에서 실행 중이면 기존 서버의 버전과 모델 저장 경로가 사용된다.
 
-이 과제의 확인 범위는 간단한 대화 가능 여부다. 지식 정확성, 복잡한 추론, 모든 한국어 지시 준수까지 검증한 것은 아니다. GitHub 저장소는 소스와 결과를 제공하며 웹 대화 서비스를 자동으로 호스팅하지 않는다.
+이 과제의 확인 범위는 간단한 대화 가능 여부다. 지식 정확성, 복잡한 추론, 모든 한국어 지시 준수까지 검증한 것은 아니다. GitHub Pages를 통해 docs 폴더의 웹 프로그램을 공개한다.
 
 ### 결론
 
