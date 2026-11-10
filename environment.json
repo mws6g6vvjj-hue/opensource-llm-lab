@@ -1,0 +1,11 @@
+{
+  "os": "Microsoft Windows 10 Pro",
+  "version": "10.0.19045",
+  "cpu": "Intel(R) Core(TM) i7-10700F CPU @ 2.90GHz",
+  "ram_gb": 31.9,
+  "gpu": "NVIDIA GeForce RTX 3070",
+  "gpu_memory_mib": 8192,
+  "python": "Python 3.9.0",
+  "ollama": "0.40.16",
+  "installation_sha256": "50fcf5ad54277f2fa5d173ebfc93bcb017adbc0c9ef2314daabc96ca9e6aa64e"
+}
