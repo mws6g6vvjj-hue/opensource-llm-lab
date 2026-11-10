@@ -1,0 +1,37 @@
+{
+  "tested_at": "2026-11-10",
+  "url": "https://mws6g6vvjj-hue.github.io/opensource-llm-lab/",
+  "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+  "library": "Transformers.js 3.8.1",
+  "dtype": "q4",
+  "device": "webgpu",
+  "tests": [
+    {
+      "prompt": "사과가 3개 있고 2개를 더 받았습니다. 모두 몇 개인가요? 짧게 답하세요.",
+      "response": "5个人",
+      "assessment": "숫자 5는 맞으나 한국어 및 단위 표현 부적절"
+    },
+    {
+      "prompt": "안녕하세요. 한국어로 짧게 인사해 주세요.",
+      "response": "안녕하세요! 어떻게 도와드릴까요?",
+      "assessment": "한국어 인사 응답 확인"
+    },
+    {
+      "prompt": "기억할 단어는 파란고래입니다. 단어를 그대로 답하세요.",
+      "response": "파란고래",
+      "assessment": "단어 재현 성공"
+    },
+    {
+      "prompt": "방금 기억하라고 한 단어가 무엇인가요? 단어만 답하세요.",
+      "response": "물건",
+      "assessment": "후속 질문에서 기억할 단어 재현 실패"
+    }
+  ],
+  "cpu_test": {
+    "device": "wasm",
+    "threads": 1,
+    "prompt": "안녕하세요. 한국어로 짧게 인사해 주세요.",
+    "response": "안녕하세요! 어떻게 도와드릴까요?",
+    "assessment": "CPU 호환 모드에서 모델 로딩 및 실제 답변 생성 확인"
+  }
+}
