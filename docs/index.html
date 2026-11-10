@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Qwen 대화 실습 | 오픈소스 LLM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+<header><a class="brand" href="./">LLM LAB <span>오픈소스 언어 모델 실습</span></a><a href="https://app.notion.com/p/4143a9f958b980c38daee3fd020c7af7" target="_blank" rel="noopener">실습 보고서 ↗</a></header>
+<section class="intro"><p class="eyebrow">QWEN2.5 · BROWSER CHAT</p><h1>질문을 입력하고,<br>모델의 답변을 확인하세요.</h1><p>별도 프로그램 설치나 로그인 없이 사용하는 오픈소스 LLM 대화 실습입니다.</p></section>
+<div class="layout">
+<aside class="panel setup"><span class="step">01 / 모델 준비</span><h2>대화 시작하기</h2><p>처음 한 번 모델 파일을 브라우저로 불러옵니다. 인터넷과 PC 성능에 따라 수 분 걸릴 수 있습니다.</p><label for="device">실행 방식</label><select id="device"><option value="auto">자동 선택 (권장)</option><option value="wasm">호환 모드 (CPU)</option></select><button id="load" class="primary">모델 불러오기</button><div class="status" role="status" aria-live="polite"><span id="status">아직 모델을 불러오지 않았습니다.</span><progress id="progress" max="100" value="0" hidden></progress><small id="detail"></small></div><div class="model"><strong>Qwen2.5 0.5B Instruct</strong><span>브라우저에서 실제 모델을 실행합니다.</span><span>준비된 답변을 보여 주는 시연이 아닙니다.</span></div><p class="notice">PC용 보고서의 1.5B 모델과 크기가 다릅니다. 작은 모델은 한국어 표현이나 사실 설명에서 오류를 낼 수 있습니다.</p><details><summary>사용 환경과 출처</summary><p>최신 Chrome 또는 Edge의 PC 환경을 권장합니다. GPU를 사용할 수 없으면 CPU로 실행합니다. 모델은 Hugging Face, 실행 라이브러리는 jsDelivr에서 다운로드합니다. 입력한 대화는 이 페이지에서 처리하며 별도 대화 서버에 전송하지 않습니다.</p><a href="https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct" target="_blank" rel="noopener">ONNX 모델 ↗</a><br><a href="https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct" target="_blank" rel="noopener">원본 모델·라이선스 ↗</a><br><a href="https://huggingface.co/docs/transformers.js" target="_blank" rel="noopener">Transformers.js ↗</a></details></aside>
+<section class="panel chat"><div class="chat-header"><div><span class="step">02 / 직접 대화</span><h2>한국어 대화 테스트</h2></div><button id="reset" class="subtle" disabled>대화 초기화</button></div><div id="messages" class="messages" role="log" aria-live="polite"><div id="empty" class="empty"><span class="chat-icon">↗</span><h3>어떤 질문부터 해볼까요?</h3><p>왼쪽에서 모델을 불러온 뒤 질문을 보내세요.<br>이전 대화에 이어 질문할 수도 있습니다.</p></div></div><div class="examples"><button data-prompt="안녕하세요! 한국어로 짧게 인사해 주세요.">한국어 인사</button><button data-prompt="사과가 3개 있고 2개를 더 받았습니다. 모두 몇 개인가요? 한 문장으로 답하세요.">간단한 계산</button><button data-prompt="이번 대화에서 기억할 단어는 파란고래입니다. 짧게 확인해 주세요.">기억할 단어 전달</button></div><form id="form"><label class="sr-only" for="prompt">질문 입력</label><textarea id="prompt" placeholder="모델을 불러온 후 질문을 입력하세요." rows="2" maxlength="1500" disabled></textarea><div class="composer-footer"><small id="meta">Enter 전송 · Shift+Enter 줄바꿈</small><button id="send" class="primary" type="submit" disabled>보내기 ↑</button></div></form><p class="disclaimer">답변은 실제 모델이 생성하며 정확성을 보장하지 않습니다. 개인정보와 실제 비밀번호는 입력하지 마세요.</p></section>
+</div><footer>직접 설치한 모델의 실행 원리와 한계를 확인하는 학습용 프로그램 <a href="https://github.com/mws6g6vvjj-hue/opensource-llm-lab" target="_blank" rel="noopener">소스 코드 ↗</a></footer>
+</main><script type="module" src="app.js"></script>
+</body></html>
